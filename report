@@ -1,0 +1,48 @@
+# Online Shopping System (C++ OOP)
+
+## 1. Introduction
+
+This project implements a console-based Online Shopping System in C++ that demonstrates core Object-Oriented Programming (OOP) principles: Encapsulation, Inheritance, Polymorphism, and Abstraction. Users can browse products (electronics and courses), add items to a shopping cart, apply category-specific discounts, generate bills, and checkout interactively.
+
+The system simulates an e-commerce platform with product catalogs, carts, and billing, providing a practical example of OOP in action for educational purposes.
+
+## 2. Objectives of the Project
+
+- Implement all four pillars of OOP in a real-world application.
+- Create a functional shopping cart with polymorphic discount calculations.
+- Enable product management and user interaction via console.
+- Demonstrate memory management with dynamic allocation and proper destructors.
+
+## 3. Methodology / System Design
+
+The design uses an abstract base class `Product` for abstraction, with pure virtual methods `display()` and `calculateDiscountedPrice()` enabling polymorphism. Derived classes `Electronics` and `Course` inherit from `Product`, overriding methods (e.g., 10% discount for electronics).
+
+Encapsulation hides data like brand/level in private members with public interfaces. Classes include `CartItem`, `ShoppingCart`, and `OnlineShop` for modular structure. UML-like hierarchy:
+
+- `Product` (abstract)
+  - `Electronics`
+  - `Course`
+- `CartItem` → `ShoppingCart`
+- `OnlineShop` manages inventory.
+
+## 4. Implementation / Source Code
+
+### Key Features
+- Product browsing and search by ID.
+- Add multiple quantities to cart with runtime polymorphism for pricing.
+- Bill generation with formatted output using `<iomanip>`.
+- Proper cleanup with virtual destructors and RAII.
+
+### How to Run
+1. Clone the repo: `git clone <your-repo-url>`
+2. Compile: `g++ -o shopping main.cpp` (or use IDE like Code::Blocks/Dev-C++)
+3. Run: `./shopping`
+4. Enter name, browse/add products (IDs 1-4), view bill.
+
+**Main.cpp** contains the complete source code (see repo files).
+
+## 5. Conclusion
+
+This project successfully showcases OOP concepts in a functional e-commerce system, improving code reusability, maintainability, and extensibility. Future enhancements could include file persistence, user authentication, or GUI integration.
+
+**License**: MIT License – feel free to fork and extend!
