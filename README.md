@@ -1,4 +1,3 @@
-# online-shopping-system
 #include <iostream>
 #include <string>
 #include <vector>
